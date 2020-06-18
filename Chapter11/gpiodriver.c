@@ -2,6 +2,7 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
+
 #include <linux/init.h>
 #include <linux/stat.h>
 
@@ -106,7 +107,6 @@ static void out(void)
 	cdev_del(&gpio_cdev);
 }
 // End of cleanup section
-
 
 static int gpio_open(struct inode *inod, struct file *fil)
 {
